@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <SurfaceView
+        android:id="@+id/vSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="540dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivPublicAd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/ivCompanyAd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vSurfaceView" />
+
+    <ImageView
+        android:id="@+id/ivCompanyAd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@color/colorPrimaryDark"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/ivPublicAd"
+        app:layout_constraintTop_toBottomOf="@id/vSurfaceView" />
+
+    <RelativeLayout
+        android:id="@+id/rlOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/rlPayTheBill"
+        app:layout_constraintEnd_toEndOf="@id/rlPayTheBill"
+        app:layout_constraintStart_toStartOf="@id/rlPayTheBill"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <ImageView
+            android:id="@+id/ivOrder"
+            android:layout_width="48dp"
+            android:layout_height="64dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_order" />
+
+        <TextView
+            android:id="@+id/tvOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivOrder"
+            android:layout_centerHorizontal="true"
+            android:text="点餐"
+            android:textColor="#FFEB3B" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rlPayTheBill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/rlRecharge"
+        app:layout_constraintEnd_toEndOf="@id/rlRecharge"
+        app:layout_constraintStart_toStartOf="@id/rlRecharge"
+        app:layout_constraintTop_toBottomOf="@id/rlOrder">
+
+        <ImageView
+            android:id="@+id/ivPayTheBill"
+            android:layout_width="48dp"
+            android:layout_height="64dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_pay_the_bill" />
+
+        <TextView
+            android:id="@+id/tvPayTheBill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivPayTheBill"
+            android:layout_centerHorizontal="true"
+            android:text="买单"
+            android:textColor="#FFEB3B" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlRecharge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@id/rlSocialContact"
+        app:layout_constraintEnd_toEndOf="@id/rlSocialContact"
+        app:layout_constraintStart_toStartOf="@id/rlSocialContact"
+        app:layout_constraintTop_toBottomOf="@id/rlPayTheBill">
+
+        <ImageView
+            android:id="@+id/ivRecharge"
+            android:layout_width="48dp"
+            android:layout_height="64dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_recharge" />
+
+        <TextView
+            android:id="@+id/tvRecharge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivRecharge"
+            android:layout_centerHorizontal="true"
+            android:text="扫码充电"
+            android:textColor="#FFEB3B" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlSocialContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rlRecharge">
+
+        <ImageView
+            android:id="@+id/ivSocialContact"
+            android:layout_width="48dp"
+            android:layout_height="64dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_social_contacts" />
+
+        <TextView
+            android:id="@+id/tvSocialContact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivSocialContact"
+            android:layout_centerHorizontal="true"
+            android:text="社交互动"
+            android:textColor="#FFEB3B" />
+    </RelativeLayout>
+
+    <android.support.constraint.Group
+        android:id="@+id/gBtnGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="rlOrder,rlPayTheBill,rlRecharge,rlSocialContact" />
+
+</android.support.constraint.ConstraintLayout>
